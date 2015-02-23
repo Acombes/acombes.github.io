@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #button {
+            display: block;
+            width: 392px;
+            height: 440px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            background: url(button.jpg) no-repeat left top;
+            cursor: pointer;
+        }
+
+        #button:hover:active {
+            background-position: right top;
+        }
+    </style>
+</head>
+<body>
+
+
+<a id="button"></a>
+
+
+<script>
+    function playNew() {
+        var tag = document.createElement('audio');
+        tag.setAttribute("preload", "auto");
+        tag.setAttribute("autoplay", "autoplay");
+        tag.setAttribute("src", "inception.mp3");
+
+        tag.addEventListener('ended', function () {
+            this.remove();
+        });
+
+        document.body.appendChild(tag);
+    }
+
+    document.getElementById('button').addEventListener('click', playNew);
+</script>
+
+</body>
+</html>
