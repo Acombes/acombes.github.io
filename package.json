@@ -1,0 +1,25 @@
+{
+  "name": "acombes.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Acombes/acombes.github.io.git"
+  },
+  "author": "Antoine COMBES",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Acombes/acombes.github.io/issues"
+  },
+  "homepage": "https://github.com/Acombes/acombes.github.io#readme",
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}

@@ -1,0 +1,5 @@
+// Ignore npm generated files
+node_modules
+
+// Ignore SASS cache files
+.sass-cache
