@@ -1,5 +1,9 @@
 // Ignore npm generated files
-node_modules
+node_modules/
+npm-debug.log
+
+// Ignore bower generated files
+bower_components/
 
 // Ignore SASS cache files
 .sass-cache

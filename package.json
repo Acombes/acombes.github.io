@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/Acombes/acombes.github.io/issues"
   },
-  "homepage": "https://github.com/Acombes/acombes.github.io#readme",
+  "homepage": "https://github.com/Acombes/acombes.github.io",
   "dependencies": {
     "grunt": "^1.0.1",
     "grunt-cli": "^1.2.0",
