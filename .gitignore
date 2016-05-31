@@ -1,9 +1,12 @@
-// Ignore npm generated files
+# JetBrains project settings directory
+.idea/
+
+# Ignore npm generated files
 node_modules/
 npm-debug.log
 
-// Ignore bower generated files
+# Ignore bower generated files
 bower_components/
 
-// Ignore SASS cache files
+# Ignore SASS cache files
 .sass-cache
