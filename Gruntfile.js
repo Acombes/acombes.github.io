@@ -1,13 +1,28 @@
 module.exports = function (grunt) {
+    var autoprefixer = require('autoprefixer'),
+        cssnano = require('cssnano');
 
     grunt.initConfig({
         sass: {
             options: {
-                sourcemap: "file"
+                sourcemap: "none"
             },
             dist: {
                 files: {
-                    "stylesheets/styles.css": "stylesheets/styles.scss"
+                    "dist/styles.css": "stylesheets/styles.scss"
+                }
+            }
+        },
+        postcss: {
+            options: {
+                processors: [
+                    autoprefixer({browsers: 'last 2 versions'}),
+                    cssnano()
+                ]
+            },
+            dist: {
+                files: {
+                    "dist/styles.min.css": "stylesheets/styles.css"
                 }
             }
         },
@@ -15,14 +30,13 @@ module.exports = function (grunt) {
             options: {
                 livereload: 35729
             },
+            html: {
+                files: 'index.html',
+                tasks: []
+            },
             styles: {
                 files: ['stylesheets/**/*.scss', 'stylesheets/**/*.css', '!stylesheets/styles.css'],
                 tasks: ['styles']
-            }
-        },
-        serve: {
-            options: {
-                port: 8080
             }
         }
     });
@@ -30,9 +44,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-postcss');
-    grunt.loadNpmTasks('grunt-serve');
 
 
-    grunt.registerTask('styles', ['sass']);
+    grunt.registerTask('styles', ['sass', 'postcss']);
     grunt.registerTask('default', ['styles']);
 };

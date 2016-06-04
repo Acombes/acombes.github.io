@@ -5,8 +5,5 @@
 node_modules/
 npm-debug.log
 
-# Ignore bower generated files
-bower_components/
-
 # Ignore SASS cache files
 .sass-cache
