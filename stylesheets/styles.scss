@@ -1,8 +1,12 @@
-@import 'libs/reset';
+
+// Import abstract rules
+@import 'scss/abstracts';
+
+// Import libraries
+@import 'scss/_base';
 
 // General page layout
-@import "scss/_layout";
+@import "scss/layout";
 
-*, *:before, *:after {
-	box-sizing: border-box;
-}
+// Components
+@import "scss/components";

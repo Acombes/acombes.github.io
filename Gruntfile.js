@@ -22,7 +22,7 @@ module.exports = function (grunt) {
             },
             dist: {
                 files: {
-                    "dist/styles.min.css": "stylesheets/styles.css"
+                    "dist/styles.min.css": "dist/styles.css"
                 }
             }
         },

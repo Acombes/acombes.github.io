@@ -1,0 +1,12 @@
+.table-like {
+    display: table;
+
+    & > * {
+        display: table-row;
+    }
+
+    & > * > * {
+        display: table-cell;
+        vertical-align: top;
+    }
+}

@@ -45,9 +45,8 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.container {
-  max-width: 900px;
-  margin: 0 auto; }
+*, *:before, *:after {
+  box-sizing: border-box; }
 
 .page {
   margin: 50px 20px;
@@ -55,5 +54,14 @@ table {
   border-radius: 10px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2); }
 
-*, *:before, *:after {
-  box-sizing: border-box; }
+.container {
+  max-width: 900px;
+  margin: 0 auto; }
+
+.table-like {
+  display: table; }
+  .table-like > * {
+    display: table-row; }
+  .table-like > * > * {
+    display: table-cell;
+    vertical-align: top; }
