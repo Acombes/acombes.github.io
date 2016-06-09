@@ -10,13 +10,36 @@
 
 
 <main class="container">
-    <article class="page">
+    <article class="page" itemscope itemtype="http://schema.org/Person">
         <header>
-            <!-- TODO header
-            - name
-            - title
-            - address
-             -->
+            <div class="image" style="display: none;">
+                <img src="assets/antoine.png" alt="Antoine COMBES" itemprop="image">
+            </div>
+
+            <h1 class="name">
+                <span itemprop="givenName">Antoine</span> <span itemprop="familyName">COMBES</span>
+            </h1>
+
+            <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                <span itemprop="streetAddress">317, rue Garibaldi</span>
+                <span itemprop="postalCode">69007</span> <span itemprop="addressLocality">Lyon</span> - <span itemprop="addressCountry">France</span>
+            </address>
+
+            <div class="labeled" title="Telephone">
+                <a href="tel:+33603941377" itemprop="telephone">(+33)6 03 94 13 77</a>
+            </div>
+            <div class="labeled" title="Mail">
+                <a href="mailto:antoine.combes.ac@gmail.com" itemprop="email">antoine.combes.ac@gmail.com</a>
+            </div>
+            <div class="labeled" title="Nationality" itemprop="nationality" itemscope itemtype="http://schema.org/Country">
+                <span itemprop="name">France</span>
+            </div>
+
+            <div class="job-title" itemprop="jobTitle">Front-end Developer</div>
+
+            <div class="description" itemprop="description">
+                <!-- TODO description ?? -->
+            </div>
         </header>
 
         <section class="experience">
@@ -30,7 +53,10 @@
                     </div>
 
                     <div class="content">
-                        <h3 class="group-title"><a href="http://www.smile.fr" target="_blank">Smile</a></h3>
+                        <h3 class="group-title" itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
+                            <link itemprop="sameAs" href="http://www.smile.fr" property="vocabulary">
+                            <a href="http://www.smile.fr" target="_blank" itemprop="name">Smile</a>
+                        </h3>
 
                         <div class="desc">
                             <p>A french software firm specialised in the integration of Open Source software</p>
@@ -80,7 +106,20 @@
                         </div>
                     </div>
                 </div>
-                <!-- TODO add something about liferay -->
+                <div class="row grouped">
+                    <div class="year">
+                        <span class="from">Apr 2013</span>
+                        <span class="to">Sept. 2013</span>
+                    </div>
+                    <div class="content">
+                        <div class="title">
+                            Internship at <span itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
+                            <link itemprop="sameAs" href="http://www.smile.fr" property="vocabulary">
+                            <a href="http://www.smile.fr" target="_blank" itemprop="name">Smile</a></span> working with
+                            <a href="https://www.liferay.com/home" target="_blank">Liferay</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -89,7 +128,23 @@
 
             <div class="timeline table-like">
                 <div class="row">
-                    <!-- TODO personal discoveries and training on technologies -->
+                    <div class="year"></div>
+                    <div class="content">
+                        <div class="desc">
+                            <p>Personal experiments and self-training</p>
+                            <dl>
+                                <dt><a href="https://angularjs.org/" target="_blank">AngularJS</a></dt>
+                                <dd>A JavaScript client-side single-page web application framework</dd>
+
+                                <dt><a href="http://reactjs.net/" target="_blank">React</a></dt>
+                                <dd>A JavaScript client-side framework rendering views through standalone components</dd>
+
+                                <dt><a href="https://golang.org/" target="_blank">Golang</a></dt>
+                                <dd>A programming language in the spirit of C aiming at improving conciseness,
+                                    simplicity and safety</dd>
+                            </dl>
+                        </div>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="year">
@@ -119,7 +174,12 @@
                     <div class="content">
                         <div class="desc">
                             <span class="main">
-                                Graduation at the <a href="http://www.mines-stetienne.fr/en/" target="_blank">École Nationale Supérieure des Mines de Saint-Étienne</a>
+                                Graduation at the
+                                <a href="http://www.mines-stetienne.fr/en/" target="_blank" itemprop="alumniOf"
+                                   itemscope itemtype="http://schema.org/EducationalOrganization">
+                                    <link itemprop="sameAs" href="http://www.mines-stetienne.fr/en/" property="vocabulary">
+                                    <span itemprop="name">École Nationale Supérieure des Mines de Saint-Étienne</span>
+                                </a>
                             </span>
                             <span class="secondary">
                                 after 2 years of advanced Mathematics, Physics and Engineering preparatory classes, leading to national admission exams
