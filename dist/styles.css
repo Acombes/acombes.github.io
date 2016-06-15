@@ -1,17 +1,12 @@
 @font-face {
-  font-family: Open Sans;
-  src: url("../assets/fonts/open-sans/opensans-regular-webfont.woff2") format("woff2"), url("../assets/fonts/open-sans/opensans-regular-webfont.woff") format("woff");
+  font-family: Raleway;
+  src: url("../assets/fonts/raleway/raleway-regular-webfont.woff2") format("woff2"), url("../assets/fonts/raleway/raleway-regular-webfont.woff") format("woff");
   font-weight: 400;
   font-style: normal; }
 @font-face {
-  font-family: Open Sans;
-  src: url("../assets/fonts/open-sans/opensans-bold-webfont.woff2") format("woff2"), url("../assets/fonts/open-sans/opensans-bold-webfont.woff") format("woff");
-  font-weight: 700;
-  font-style: normal; }
-@font-face {
-  font-family: Open Sans;
-  src: url("../assets/fonts/open-sans/opensans-light-webfont.woff2") format("woff2"), url("../assets/fonts/open-sans/opensans-light-webfont.woff") format("woff");
-  font-weight: 300;
+  font-family: Roboto;
+  src: url("../assets/fonts/roboto/roboto-regular-webfont.woff2") format("woff2"), url("../assets/fonts/roboto/roboto-regular-webfont.woff") format("woff");
+  font-weight: 400;
   font-style: normal; }
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -64,8 +59,11 @@ table {
   box-sizing: border-box; }
 
 html {
-  font: normal 400 0.875em Open Sans, Arial, sans-serif;
+  font: normal 400 0.875em Roboto, Arial, sans-serif;
   color: #555; }
+
+body {
+  line-height: normal; }
 
 a {
   display: inline-block;
@@ -92,11 +90,25 @@ a {
       transform: none;
       transition-timing-function: ease, cubic-bezier(0.25, 0.1, 0.27, 1.55); }
 
+h1 {
+  font: 700 2.14286rem Raleway, Georgia, sans-serif;
+  color: #E32636; }
+
+h2 {
+  font: 700 1.42857rem Raleway, Georgia, sans-serif;
+  color: #E32636; }
+
 .page {
   margin: 50px 20px;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2); }
+  .page > * {
+    margin: 20px 0; }
+    .page > *:first-child {
+      margin-top: 0; }
+    .page > *:last-child {
+      margin-bottom: 0; }
 
 .container {
   max-width: 900px;
@@ -109,3 +121,17 @@ a {
   .table-like > * > * {
     display: table-cell;
     vertical-align: top; }
+
+header {
+  overflow: auto;
+  font-size: 1.28571rem; }
+  header .image {
+    width: 150px;
+    float: left;
+    margin-right: 20px; }
+    header .image img {
+      display: block;
+      max-width: 100%;
+      height: auto; }
+  header .name {
+    margin-bottom: 30px; }

@@ -3,8 +3,12 @@
 }
 
 html {
-    font: normal 400 $rootFontSize $openSans;
+    font: normal 400 (1em * $rootFontSize / $fontSizeRef) $body;
     color: $textBlack;
+}
+
+body {
+    line-height: normal;
 }
 
 a {
@@ -39,4 +43,14 @@ a {
             transition-timing-function: ease, cubic-bezier(0.25, 0.1, 0.27, 1.55);
         }
     }
+}
+
+h1 {
+    font: 700 pxToRem(30px) $headings;
+    color: $mainColor;
+}
+
+h2 {
+    font: 700 pxToRem(20px) $headings;
+    color: $mainColor;
 }

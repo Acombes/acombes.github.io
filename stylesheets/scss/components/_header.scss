@@ -1,0 +1,20 @@
+header {
+    overflow: auto;
+    font-size: pxToRem(18px);
+
+    .image {
+        width: 150px;
+        float: left;
+        margin-right: 20px;
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    .name {
+        margin-bottom: 30px;
+    }
+}

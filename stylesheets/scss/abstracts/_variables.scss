@@ -1,9 +1,11 @@
 
-$rootFontSize: 14em / 16; // for a font size browser setting set to medium (usually 16px)
+$fontSizeRef: 16px;
+$rootFontSize: 14px;
 
 // Colors
 $textBlack: #555;
 $mainColor: #E32636; // TODO find the main color
 
 // Fonts fallback
-$openSans: Open Sans, Arial, sans-serif;
+$headings: $headingsName, Georgia, sans-serif;
+$body: $bodyName, Arial, sans-serif;

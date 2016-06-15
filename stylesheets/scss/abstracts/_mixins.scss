@@ -9,3 +9,15 @@
         font-style: $style;
     }
 }
+
+@function strip-unit($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+        @return $number / ($number * 0 + 1);
+    }
+
+    @return $number;
+}
+
+@function pxToRem($px, $isRem: true) {
+    @return if($isRem, 1rem, 1em) * $px / $rootFontSize;
+}

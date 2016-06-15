@@ -1,8 +1,8 @@
-// Import abstract rules
-@import 'scss/abstracts';
-
 // Import Font-faces
 @import "scss/_fonts";
+
+// Import abstract rules
+@import 'scss/abstracts';
 
 // Import libraries
 @import 'scss/_base';

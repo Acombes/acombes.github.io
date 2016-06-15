@@ -1,5 +1,14 @@
+@import "abstracts/mixins";
 
-// Open Sans
-@include font-face(Open Sans, 'open-sans/opensans-regular-webfont');
-@include font-face(Open Sans, 'open-sans/opensans-bold-webfont', 700);
-@include font-face(Open Sans, 'open-sans/opensans-light-webfont', 300);
+
+// Headings
+$headingsName: Raleway;
+@include font-face($headingsName, 'raleway/raleway-regular-webfont');
+//@include font-face($headingsName, 'raleway/raleway-bold-webfont', 700);
+//@include font-face($headingsName, 'raleway/raleway-light-webfont', 300);
+
+// Body
+$bodyName: Roboto;
+@include font-face($bodyName, 'roboto/roboto-regular-webfont');
+//@include font-face($bodyName, 'roboto/roboto-bold-webfont', 700);
+//@include font-face($bodyName, 'roboto/roboto-light-webfont', 300);
