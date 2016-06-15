@@ -1,3 +1,42 @@
 *, *:before, *:after {
     box-sizing: border-box;
 }
+
+html {
+    font: normal 400 $rootFontSize $openSans;
+    color: $textBlack;
+}
+
+a {
+    $color: $mainColor;
+
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: $color;
+    transition: color .3s ease;
+
+    &:before {
+        content: "";
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        border-top: 1px solid;
+        opacity: 0;
+        transform: scaleX(0);
+        transition-duration: inherit;
+        transition-timing-function: ease;
+        transition-property: opacity, transform;
+    }
+
+    &:hover {
+        color: lighten($color, 20%);
+
+        &:before {
+            opacity: 1;
+            transform: none;
+            transition-timing-function: ease, cubic-bezier(0.25, 0.1, 0.27, 1.55);
+        }
+    }
+}

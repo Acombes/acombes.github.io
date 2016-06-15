@@ -9,7 +9,8 @@ module.exports = function (grunt) {
             },
             dist: {
                 files: {
-                    "dist/styles.css": "stylesheets/styles.scss"
+                    "dist/styles.css": "stylesheets/styles.scss",
+                    "dist/print.css": "stylesheets/print.scss"
                 }
             }
         },
@@ -22,7 +23,8 @@ module.exports = function (grunt) {
             },
             dist: {
                 files: {
-                    "dist/styles.min.css": "dist/styles.css"
+                    "dist/styles.min.css": "dist/styles.css",
+                    "dist/print.min.css": "dist/print.css"
                 }
             }
         },

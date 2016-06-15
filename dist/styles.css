@@ -1,3 +1,18 @@
+@font-face {
+  font-family: Open Sans;
+  src: url("../assets/fonts/open-sans/opensans-regular-webfont.woff2") format("woff2"), url("../assets/fonts/open-sans/opensans-regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: Open Sans;
+  src: url("../assets/fonts/open-sans/opensans-bold-webfont.woff2") format("woff2"), url("../assets/fonts/open-sans/opensans-bold-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+@font-face {
+  font-family: Open Sans;
+  src: url("../assets/fonts/open-sans/opensans-light-webfont.woff2") format("woff2"), url("../assets/fonts/open-sans/opensans-light-webfont.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -47,6 +62,35 @@ table {
 
 *, *:before, *:after {
   box-sizing: border-box; }
+
+html {
+  font: normal 400 0.875em Open Sans, Arial, sans-serif;
+  color: #555; }
+
+a {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: #E32636;
+  transition: color .3s ease; }
+  a:before {
+    content: "";
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    border-top: 1px solid;
+    opacity: 0;
+    transform: scaleX(0);
+    transition-duration: inherit;
+    transition-timing-function: ease;
+    transition-property: opacity, transform; }
+  a:hover {
+    color: #ef808a; }
+    a:hover:before {
+      opacity: 1;
+      transform: none;
+      transition-timing-function: ease, cubic-bezier(0.25, 0.1, 0.27, 1.55); }
 
 .page {
   margin: 50px 20px;
