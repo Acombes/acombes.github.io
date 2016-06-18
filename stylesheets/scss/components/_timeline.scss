@@ -1,0 +1,57 @@
+.timeline {
+    & > * > * {
+        padding-bottom: 1.4286em;
+    }
+
+    .year {
+        $lineHeight: 1.2;
+
+        width: 60px;
+        position: relative;
+        font-size: pxToRem(11px);
+        text-align: center;
+        color: $textGrey;
+
+        &:not(:empty):before {
+            content: "";
+            display: block;
+            height: .8em;
+            position: absolute;
+            top: $lineHeight * 1em;
+            left: 50%;
+            margin-top: .1em;
+            border-left: 1px solid currentColor;
+        }
+
+        .from,
+        .to {
+            display: block;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            background: #fff;
+            line-height: $lineHeight;
+            white-space: nowrap;
+        }
+
+        .from {
+            top: 2em * $lineHeight;
+        }
+
+        .to {
+            top: 0;
+        }
+    }
+
+    .content {
+        padding-left: 1em;
+    }
+
+    .title {
+        display: block;
+        margin-bottom: .6em;
+        padding-bottom: .3em;
+        border-bottom: 1px dashed $borderGrey;
+        font-size: pxToRem(16px);
+    }
+}

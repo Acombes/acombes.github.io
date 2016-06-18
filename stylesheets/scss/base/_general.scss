@@ -51,6 +51,9 @@ h1 {
 }
 
 h2 {
+    margin-bottom: .5em;
+    padding-bottom: .3em;
+    border-bottom: 1px solid currentColor;
     font: 700 pxToRem(20px) $headings;
     color: $mainColor;
 }

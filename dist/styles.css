@@ -95,6 +95,9 @@ h1 {
   color: #E32636; }
 
 h2 {
+  margin-bottom: .5em;
+  padding-bottom: .3em;
+  border-bottom: 1px solid currentColor;
   font: 700 1.42857rem Raleway, Georgia, sans-serif;
   color: #E32636; }
 
@@ -121,6 +124,45 @@ h2 {
   .table-like > * > * {
     display: table-cell;
     vertical-align: top; }
+
+.timeline > * > * {
+  padding-bottom: 1.4286em; }
+.timeline .year {
+  width: 60px;
+  position: relative;
+  font-size: 0.78571rem;
+  text-align: center;
+  color: #999; }
+  .timeline .year:not(:empty):before {
+    content: "";
+    display: block;
+    height: .8em;
+    position: absolute;
+    top: 1.2em;
+    left: 50%;
+    margin-top: .1em;
+    border-left: 1px solid currentColor; }
+  .timeline .year .from,
+  .timeline .year .to {
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    background: #fff;
+    line-height: 1.2;
+    white-space: nowrap; }
+  .timeline .year .from {
+    top: 2.4em; }
+  .timeline .year .to {
+    top: 0; }
+.timeline .content {
+  padding-left: 1em; }
+.timeline .title {
+  display: block;
+  margin-bottom: .6em;
+  padding-bottom: .3em;
+  border-bottom: 1px dashed #ccc;
+  font-size: 1.14286rem; }
 
 header {
   overflow: auto;
