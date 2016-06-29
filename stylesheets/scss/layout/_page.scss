@@ -4,8 +4,20 @@
     border-radius: 10px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
 
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
     & > * {
         margin: 20px 0;
+
+        &:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
 
         &:first-child {
             margin-top: 0;

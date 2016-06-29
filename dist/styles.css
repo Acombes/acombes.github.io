@@ -90,6 +90,12 @@ a {
       transform: none;
       transition-timing-function: ease, cubic-bezier(0.25, 0.1, 0.27, 1.55); }
 
+strong {
+  font-weight: 700; }
+
+em {
+  font-style: italic; }
+
 h1 {
   font: 700 2.14286rem Raleway, Georgia, sans-serif;
   color: #E32636; }
@@ -101,13 +107,35 @@ h2 {
   font: 700 1.42857rem Raleway, Georgia, sans-serif;
   color: #E32636; }
 
+dl {
+  display: inline-block; }
+  dl dt, dl dd {
+    display: block; }
+  dl dt {
+    clear: both;
+    float: left;
+    margin-right: .3em;
+    font-weight: 700; }
+    dl dt:after {
+      content: " : "; }
+  dl dd {
+    overflow: hidden; }
+
 .page {
   margin: 50px 20px;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2); }
+  .page:after {
+    content: "";
+    display: table;
+    clear: both; }
   .page > * {
     margin: 20px 0; }
+    .page > *:after {
+      content: "";
+      display: table;
+      clear: both; }
     .page > *:first-child {
       margin-top: 0; }
     .page > *:last-child {
@@ -124,6 +152,18 @@ h2 {
   .table-like > * > * {
     display: table-cell;
     vertical-align: top; }
+
+.half-width {
+  display: block;
+  width: 50%;
+  float: left;
+  padding: 0 20px; }
+  .half-width:not(:first-child):not(:nth-child(2)) {
+    margin-top: 0; }
+  .half-width.left {
+    padding-left: 0; }
+  .half-width.right {
+    padding-right: 0; }
 
 .timeline > * > * {
   padding-bottom: 1.4286em; }

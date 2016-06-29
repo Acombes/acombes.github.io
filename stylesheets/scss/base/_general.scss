@@ -45,6 +45,14 @@ a {
     }
 }
 
+strong {
+    font-weight: 700;
+}
+
+em {
+    font-style: italic;
+}
+
 h1 {
     font: 700 pxToRem(30px) $headings;
     color: $mainColor;
@@ -56,4 +64,27 @@ h2 {
     border-bottom: 1px solid currentColor;
     font: 700 pxToRem(20px) $headings;
     color: $mainColor;
+}
+
+dl {
+    display: inline-block;
+
+    dt, dd {
+        display: block;
+    }
+
+    dt {
+        clear: both;
+        float: left;
+        margin-right: .3em;
+        font-weight: 700;
+
+        &:after {
+            content: " : "
+        }
+    }
+
+    dd {
+        overflow: hidden;
+    }
 }

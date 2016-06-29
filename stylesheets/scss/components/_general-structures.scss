@@ -10,3 +10,22 @@
         vertical-align: top;
     }
 }
+
+.half-width {
+    display: block;
+    width: 50%;
+    float: left;
+    padding: 0 20px;
+
+    &:not(:first-child):not(:nth-child(2)) {
+        margin-top: 0;
+    }
+
+    &.left {
+        padding-left: 0;
+    }
+
+    &.right {
+        padding-right: 0;
+    }
+}
