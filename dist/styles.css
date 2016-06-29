@@ -136,9 +136,9 @@ h2 {
   .timeline .year:not(:empty):before {
     content: "";
     display: block;
-    height: .8em;
+    height: 0.8em;
     position: absolute;
-    top: 1.2em;
+    top: 1.3em;
     left: 50%;
     margin-top: .1em;
     border-left: 1px solid currentColor; }
@@ -162,7 +162,21 @@ h2 {
   margin-bottom: .6em;
   padding-bottom: .3em;
   border-bottom: 1px dashed #ccc;
-  font-size: 1.14286rem; }
+  font-weight: 700;
+  font-size: 1.14286rem;
+  font-family: Raleway, Georgia, sans-serif; }
+.timeline .grouped.head > * {
+  padding-bottom: 10px;
+  border-bottom: 3px double #ccc; }
+.timeline .grouped.head:not(:first-child) > * {
+  border-top: 20px solid transparent; }
+.timeline .grouped.head + .grouped > * {
+  border-top: 10px solid transparent; }
+.timeline .grouped .group-title {
+  margin-bottom: .3em;
+  font-weight: 700;
+  font-size: 1.42857rem;
+  line-height: 1; }
 
 header {
   overflow: auto;

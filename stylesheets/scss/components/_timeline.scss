@@ -13,11 +13,13 @@
         color: $textGrey;
 
         &:not(:empty):before {
+            $separatorHeight: .8em;
+
             content: "";
             display: block;
-            height: .8em;
+            height: $separatorHeight;
             position: absolute;
-            top: $lineHeight * 1em;
+            top: $lineHeight * 1em + (1em - $separatorHeight)/2;
             left: 50%;
             margin-top: .1em;
             border-left: 1px solid currentColor;
@@ -52,6 +54,34 @@
         margin-bottom: .6em;
         padding-bottom: .3em;
         border-bottom: 1px dashed $borderGrey;
+        font-weight: 700;
         font-size: pxToRem(16px);
+        font-family: $headings;
+    }
+
+
+
+    .grouped {
+        &.head {
+            & > * {
+                padding-bottom: 10px;
+                border-bottom: 3px double $borderGrey;
+            }
+
+            &:not(:first-child) > * {
+                border-top: 20px solid transparent;
+            }
+
+            & + .grouped > * {
+                border-top: 10px solid transparent;
+            }
+        }
+
+        .group-title {
+            margin-bottom: .3em;
+            font-weight: 700;
+            font-size: pxToRem(20px);
+            line-height: 1;
+        }
     }
 }
