@@ -166,7 +166,7 @@ h2 {
 
 header {
   overflow: auto;
-  font-size: 1.28571rem; }
+  font-size: 1rem; }
   header .image {
     width: 150px;
     float: left;
@@ -176,4 +176,13 @@ header {
       max-width: 100%;
       height: auto; }
   header .name {
-    margin-bottom: 30px; }
+    margin-bottom: .5em; }
+  header .job-title {
+    margin: .7em 0;
+    font-size: 1.28571rem; }
+  header address {
+    margin: .5em 0; }
+    header address .street-address {
+      display: block; }
+  header .labeled:before {
+    content: attr(title) " :"; }
