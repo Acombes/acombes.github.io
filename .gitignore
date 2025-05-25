@@ -1,9 +1,0 @@
-# JetBrains project settings directory
-.idea/
-
-# Ignore npm generated files
-node_modules/
-npm-debug.log
-
-# Ignore SASS cache files
-.sass-cache
