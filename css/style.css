@@ -1,0 +1,96 @@
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  --ac-background: #fff;
+  --ac-separator-color: #000;
+  --ac-section-gap: 2rem;
+}
+
+html {
+  font-size: 10px;
+  box-sizing: border-box;
+  background: #ccc;
+}
+
+.page {
+  width: 1024px;
+  margin: 3rem auto;
+  padding: 3rem;
+  background: var(--ac-background);
+  font-size: 1.6rem;
+}
+
+.print-only {
+  @media not print {
+    display: none;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 4rem;
+}
+
+.identity {
+  flex: 1;
+  border-bottom: 2px solid var(--ac-separator-color);
+  padding-bottom: 3rem;
+}
+
+.name {
+  margin-bottom: 2rem;
+  font-size: 4rem;
+}
+
+.photo-container {
+  width: 20rem;
+  height: 20rem;
+  position: relative;
+  border-radius: 100000px;
+  overflow: hidden;
+}
+
+.photo {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @supports (object-fit: cover) {
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+.content {
+  display: flex;
+}
+
+.column.left {
+  order: 0;
+  flex: 0 0 0;
+  padding-right: var(--ac-section-gap);
+}
+
+.column.right {
+  order: 10;
+  flex: 1 0 0;
+  border-left: 2px solid var(--ac-separator-color);
+  padding-left: var(--ac-section-gap);
+}
+
+.section:not(:first-child) {
+  margin-top: var(--ac-section-gap);
+  border-top: 2px solid var(--ac-separator-color);
+  padding-top: var(--ac-section-gap);
+}
+
+.title {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 2.4rem;
+}
